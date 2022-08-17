@@ -1,7 +1,7 @@
 import config from 'config';
 import { createLogger, format, transports } from 'winston';
 
-const loggerConfig = config.get('logger');
+const loggerConfig: any = config.get('logger');
 
 const logger = createLogger({
   level: loggerConfig.level,
