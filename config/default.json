@@ -1,2 +1,5 @@
 {
+  "logger": {
+    "level": "debug"
+  }
 }
