@@ -2,6 +2,7 @@
   "name": "tdc-business-sp-2022",
   "version": "1.0.0",
   "description": "TDC Business SP 2022.",
+  "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "main": "index.js",
   "scripts": {
     "lint": "eslint 'src/**/*'",
@@ -12,7 +13,6 @@
     "url": "git+https://github.com/rodrigokamada/tdc-business-sp-2022.git"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rodrigokamada/tdc-business-sp-2022/issues"
