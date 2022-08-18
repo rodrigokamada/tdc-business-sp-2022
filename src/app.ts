@@ -1,3 +1,5 @@
+import config from 'config';
+import cors from 'cors';
 import express from 'express';
 import * as expressWinston from 'express-winston';
 import createError from 'http-errors';
@@ -8,6 +10,8 @@ const app = express();
 
 app.use(expressWinston.logger({ winstonInstance: logger }));
 app.use(express.json());
+
+app.use(cors(config.get('cors')));
 
 app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
   next(createError(404));
