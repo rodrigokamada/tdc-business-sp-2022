@@ -4,6 +4,8 @@
   },
   "cors": {
   },
+  "helmet" {
+  },
   "logger": {
     "level": "debug"
   }
