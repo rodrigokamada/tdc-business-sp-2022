@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: tdc-business-sp-2022
+    ports:
+      - 27017:27017
