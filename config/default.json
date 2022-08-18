@@ -8,5 +8,8 @@
   },
   "logger": {
     "level": "debug"
+  },
+  "mongodb": {
+    "uri": "mongodb://localhost:27017/tdc-business-sp-2022"
   }
 }

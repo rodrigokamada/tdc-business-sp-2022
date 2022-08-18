@@ -43,6 +43,7 @@
     "express-winston": "^4.2.0",
     "helmet": "^5.1.1",
     "http-errors": "^2.0.0",
+    "mongoose": "^6.5.2",
     "winston": "^3.8.1"
   }
 }

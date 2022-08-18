@@ -6,6 +6,9 @@ import helmet from 'helmet';
 import createError from 'http-errors';
 
 import logger from './utils/logger';
+import mongodb from './utils/mongodb';
+
+mongodb.connect();
 
 const app = express();
 
