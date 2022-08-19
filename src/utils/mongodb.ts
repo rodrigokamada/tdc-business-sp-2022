@@ -20,6 +20,6 @@ function connect(): Promise<mongoose.Mongoose> {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   } as mongoose.ConnectOptions);
-};
+}
 
 export default { connect };
