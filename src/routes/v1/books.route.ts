@@ -5,6 +5,21 @@ import logger from '../../utils/logger';
 
 const router = Router();
 
+router.get('/', async (req: Request, res: Response) => {
+  logger.debug('Listing the books');
+
+  try {
+    const books = await BooksModel.find();
+
+    logger.debug(`Found [${books ? books.length : 0}] books`);
+
+    res.status(200).json(books);
+  } catch (error) {
+    logger.error('An error ocurred:', error);
+    res.status(500).json(error);
+  }
+});
+
 router.post('/', async (req: Request, res: Response) => {
   const book = req.body;
 
