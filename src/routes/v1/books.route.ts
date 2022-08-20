@@ -20,6 +20,23 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/:id', async (req: Request, res: Response) => {
+  const id = req.params.id;
+
+  logger.debug(`Listing the book by id [${id}]`);
+
+  try {
+    const book = await BooksModel.findById(id);
+
+    logger.debug(`Book [${JSON.stringify(book)}] found`);
+
+    res.status(200).json(book);
+  } catch (error) {
+    logger.error('An error ocurred:', error);
+    res.status(500).json(error);
+  }
+});
+
 router.post('/', async (req: Request, res: Response) => {
   const book = req.body;
 
