@@ -2,7 +2,17 @@
   "name": "tdc-business-sp-2022",
   "version": "1.0.0",
   "description": "TDC Business SP 2022.",
+  "homepage": "https://github.com/rodrigokamada/tdc-business-sp-2022#readme",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
+  "license": "ISC",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigokamada/tdc-business-sp-2022.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rodrigokamada/tdc-business-sp-2022/issues"
+  },
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
@@ -12,16 +22,6 @@
     "lint:fix": "eslint --fix 'src/**/*'",
     "swagger": "tsoa spec"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rodrigokamada/tdc-business-sp-2022.git"
-  },
-  "keywords": [],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rodrigokamada/tdc-business-sp-2022/issues"
-  },
-  "homepage": "https://github.com/rodrigokamada/tdc-business-sp-2022#readme",
   "devDependencies": {
     "@types/config": "^3.3.0",
     "@types/cors": "^2.8.12",
