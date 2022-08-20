@@ -5,7 +5,14 @@
   "homepage": "https://github.com/rodrigokamada/tdc-business-sp-2022#readme",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "eslint",
+    "expressjs",
+    "openapi",
+    "mongodb",
+    "nodejs",
+    "swagger"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rodrigokamada/tdc-business-sp-2022.git"
