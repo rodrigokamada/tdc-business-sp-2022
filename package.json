@@ -4,7 +4,7 @@
   "description": "TDC Business SP 2022.",
   "homepage": "https://github.com/rodrigokamada/tdc-business-sp-2022#readme",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [],
   "repository": {
     "type": "git",
