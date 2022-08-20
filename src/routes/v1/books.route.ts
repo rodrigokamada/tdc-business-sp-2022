@@ -1,6 +1,6 @@
 import { Request, Response, Router } from 'express';
 
-import { booksController } from '../../controllers/books.controller';
+import booksController from '../../controllers/books.controller';
 import logger from '../../utils/logger';
 
 const router = Router();
@@ -17,7 +17,7 @@ router.get('/', async (req: Request, res: Response) => {
 });
 
 router.get('/:id', async (req: Request, res: Response) => {
-  const id = req.params.id;
+  const { id } = req.params;
 
   try {
     const book = await booksController.getById(id);
@@ -43,7 +43,7 @@ router.post('/', async (req: Request, res: Response) => {
 });
 
 router.put('/:id', async (req: Request, res: Response) => {
-  const id = req.params.id;
+  const { id } = req.params;
   const book = req.body;
 
   try {
@@ -57,7 +57,7 @@ router.put('/:id', async (req: Request, res: Response) => {
 });
 
 router.delete('/:id', async (req: Request, res: Response) => {
-  const id = req.params.id;
+  const { id } = req.params;
 
   try {
     const bookDeleted = await booksController.delete(id);

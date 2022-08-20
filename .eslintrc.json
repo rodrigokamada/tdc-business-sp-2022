@@ -12,13 +12,15 @@
     "sourceType": "module"
   },
   "rules": {
+    "class-methods-use-this": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
       {
         "ts": "never"
       }
-    ]
+    ],
+    "object-curly-newline": "off"
   },
   "settings": {
     "import/resolver": {
@@ -28,5 +30,8 @@
         ]
       }
     }
-  }
+  },
+  "ignorePatterns": [
+    "**/*.json"
+  ]
 }

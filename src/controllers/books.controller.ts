@@ -5,7 +5,6 @@ import logger from '../utils/logger';
 
 @Route('v1/books')
 class BooksController {
-
   @Get('/')
   public async get(): Promise<any> {
     logger.debug('Listing the books');
@@ -61,7 +60,8 @@ class BooksController {
 
     return bookDeleted;
   }
-
 }
 
-export const booksController: BooksController = new BooksController();
+const booksController: BooksController = new BooksController();
+
+export default booksController;
