@@ -41,4 +41,21 @@ router.put('/:id', async (req: Request, res: Response) => {
   }
 });
 
+router.delete('/:id', async (req: Request, res: Response) => {
+  const id = req.params.id;
+
+  logger.debug(`Deleting the book bu id [${id}]`);
+
+  try {
+    const bookDeleted = await BooksModel.findByIdAndRemove(id);
+
+    logger.debug(`Book [${JSON.stringify(bookDeleted)}] deleted by id [${id}]`);
+
+    res.status(200).json(bookDeleted);
+  } catch (error) {
+    logger.error('An error occurred:', error);
+    res.status(500).json(error);
+  }
+});
+
 export default router;
