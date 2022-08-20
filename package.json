@@ -1,7 +1,7 @@
 {
   "name": "tdc-business-sp-2022",
   "version": "1.0.0",
-  "description": "TDC Business SP 2022.",
+  "description": "Repositório utilizado no evento TDC Business com o tema \"API REST em Node.js: Boas práticas em produção.\"",
   "homepage": "https://github.com/rodrigokamada/tdc-business-sp-2022#readme",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "license": "MIT",
