@@ -1,8 +1,12 @@
+import { Body, Delete, Get, Path, Post, Put, Route } from 'tsoa';
+
 import BooksModel from '../models/books.model';
 import logger from '../utils/logger';
 
+@Route('v1/books')
 class BooksController {
 
+  @Get('/')
   public async get(): Promise<any> {
     logger.debug('Listing the books');
 
@@ -13,7 +17,8 @@ class BooksController {
     return books;
   }
 
-  public async getById(id: string): Promise<any> {
+  @Get('/{id}')
+  public async getById(@Path() id: string): Promise<any> {
     logger.debug(`Listing the book by id [${id}]`);
 
     const book = await BooksModel.findById(id);
@@ -23,7 +28,8 @@ class BooksController {
     return book;
   }
 
-  public async create(book: any): Promise<any> {
+  @Post('/')
+  public async create(@Body() book: any): Promise<any> {
     logger.debug(`Creating the book [${JSON.stringify(book)}]`);
 
     const bookModel = new BooksModel(book);
@@ -34,7 +40,8 @@ class BooksController {
     return bookCreated;
   }
 
-  public async update(id: string, book: any): Promise<any> {
+  @Put('/{id}')
+  public async update(@Path() id: string, @Body() book: any): Promise<any> {
     logger.debug(`Updating the book [${JSON.stringify(book)}] by id [${id}]`);
 
     const bookUpdated = await BooksModel.findByIdAndUpdate(id, book);
@@ -44,6 +51,7 @@ class BooksController {
     return bookUpdated;
   }
 
+  @Delete('/{id}')
   public async delete(id: string): Promise<any> {
     logger.debug(`Deleting the book bu id [${id}]`);
 

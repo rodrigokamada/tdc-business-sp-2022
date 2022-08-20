@@ -9,7 +9,8 @@
     "start:dev": "nodemon --exec ts-node src/index.ts",
     "build": "rimraf dist && tsc",
     "lint": "eslint 'src/**/*'",
-    "lint:fix": "eslint --fix 'src/**/*'"
+    "lint:fix": "eslint --fix 'src/**/*'",
+    "swagger": "tsoa spec"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "helmet": "^5.1.1",
     "http-errors": "^2.0.0",
     "mongoose": "^6.5.2",
+    "tsoa": "^4.1.1",
     "uuid": "^8.3.2",
     "winston": "^3.8.1"
   }
