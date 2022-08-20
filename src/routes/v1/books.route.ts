@@ -12,9 +12,29 @@ router.post('/', async (req: Request, res: Response) => {
 
   try {
     const bookModel = new BooksModel(book);
-    const newBook = await bookModel.save();
+    const bookCreated = await bookModel.save();
 
-    res.status(201).json(newBook);
+    logger.debug(`Book [${JSON.stringify(bookCreated)}] created`);
+
+    res.status(201).json(bookCreated);
+  } catch (error) {
+    logger.error('An error occurred:', error);
+    res.status(500).json(error);
+  }
+});
+
+router.put('/:id', async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const book = req.body;
+
+  logger.debug(`Updating the book by id [${id}]`);
+
+  try {
+    const bookUpdated = await BooksModel.findByIdAndUpdate(id, book);
+
+    logger.debug(`Book [${JSON.stringify(bookUpdated)}] updated by id [${id}]`);
+
+    res.status(200).json(bookUpdated);
   } catch (error) {
     logger.error('An error occurred:', error);
     res.status(500).json(error);
