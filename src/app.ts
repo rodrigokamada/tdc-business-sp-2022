@@ -7,6 +7,7 @@ import createError from 'http-errors';
 
 import logger from './utils/logger';
 import mongodb from './utils/mongodb';
+import routes from './routes';
 
 mongodb.connect();
 
@@ -16,8 +17,9 @@ app.use(expressWinston.logger({ winstonInstance: logger }));
 app.use(express.json());
 
 app.use(cors(config.get('cors')));
-
 app.use(helmet(config.get('helmet')));
+
+app.use('/', routes);
 
 app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
   next(createError(404));
