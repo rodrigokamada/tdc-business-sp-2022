@@ -107,3 +107,13 @@ npm run build
 ```shell
 npm start
 ```
+
+
+
+## Execução com o Nodemon
+
+**1.** Executar a aplicação.
+
+```shell
+npm run start:dev
+```
