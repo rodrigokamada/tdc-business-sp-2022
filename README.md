@@ -1,6 +1,6 @@
 # TDC Business SP 2022
 
-Repositório utilizado no evento TDC Business com o tema *API REST em Node.js: Boas práticas em produção*.
+Repositório utilizado no evento TDC Business com o tema _API REST em Node.js: Boas práticas em produção_.
 
 
 
@@ -37,4 +37,53 @@ npm run lint
 
 ```shell
 npm run start:dev
+```
+
+
+
+## Testes
+
+### Testes automáticos
+
+**1.** Execute os testes.
+
+```shell
+npm test
+```
+
+
+### Testes manuais
+
+**1.** Fazer uma requisição na aplicação para listar os livros.
+
+```shell
+curl -v "http://localhost:3000/v1/books"
+```
+
+**2.** Fazer uma requisição na aplicação para criar um livro.
+
+```shell
+curl -v -X POST "http://localhost:3000/v1/books" \
+-H "content-type: application/json" \
+-d '{
+  "title": "Some title",
+  "author": "Some author"
+}'
+```
+
+**3.** Fazer uma requisição na aplicação para alterar um livro.
+
+```shell
+curl -v -X PUT "http://localhost:3000/v1/books/ID" \
+-H "content-type: application/json" \
+-d '{
+  "title": "Some title 2",
+  "author": "Some author 2"
+}'
+```
+
+**4.** Fazer uma requisição na aplicação para apagar um livro.
+
+```shell
+curl -v -X DELETE "http://localhost:3000/v1/books/ID"
 ```
