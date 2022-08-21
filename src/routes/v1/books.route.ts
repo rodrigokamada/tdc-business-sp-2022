@@ -22,7 +22,11 @@ router.get('/:id', async (req: Request, res: Response) => {
   try {
     const book = await booksController.getById(id);
 
-    res.status(200).json(book);
+    if (book) {
+      res.status(200).json(book);
+    } else {
+      res.status(404).send();
+    }
   } catch (error) {
     logger.error('An error ocurred:', error);
     res.status(500).json(error);
