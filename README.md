@@ -45,7 +45,7 @@ npm run start:dev
 
 ### Testes automáticos
 
-**1.** Execute os testes.
+**1.** Executar os testes.
 
 ```shell
 npm test
@@ -86,4 +86,14 @@ curl -v -X PUT "http://localhost:3000/v1/books/ID" \
 
 ```shell
 curl -v -X DELETE "http://localhost:3000/v1/books/ID"
+```
+
+
+
+## Transpilação
+
+**1.** Compilar/transpilar a aplicação.
+
+```shell
+npm run build
 ```
