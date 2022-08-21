@@ -7,12 +7,9 @@ import createError from 'http-errors';
 import swaggerUi from 'swagger-ui-express';
 
 import logger from './utils/logger';
-import mongodb from './utils/mongodb';
 import routes from './routes';
 
 const swaggerDocument = require('./swagger.json');
-
-mongodb.connect();
 
 const app = express();
 

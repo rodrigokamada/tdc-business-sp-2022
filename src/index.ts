@@ -3,6 +3,9 @@ import http from 'http';
 
 import app from './app';
 import logger from './utils/logger';
+import mongodb from './utils/mongodb';
+
+mongodb.connect();
 
 const applicationConfig: any = config.get('application');
 
