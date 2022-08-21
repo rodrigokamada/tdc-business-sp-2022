@@ -97,3 +97,13 @@ curl -v -X DELETE "http://localhost:3000/v1/books/ID"
 ```shell
 npm run build
 ```
+
+
+
+## Execução
+
+**1.** Executar a aplicação.
+
+```shell
+npm start
+```
