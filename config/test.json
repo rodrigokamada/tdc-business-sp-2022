@@ -10,6 +10,6 @@
     "level": "debug"
   },
   "mongodb": {
-    "uri": "mongodb://localhost:27017/"
+    "uri": "mongodb://test-host:27017/tdc-business-sp-2022"
   }
 }
